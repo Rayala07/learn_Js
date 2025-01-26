@@ -23,6 +23,20 @@ console.log("1" + 2) //=> 12
 console.log("1" + 2 + 2) //=> 122
 console.log(1 + 2 + "3") //=> 33
 
-//Prefix and Postfix Operator is important to learn - resource MDN.
+/* 
+Prefix and Postfix Operator is important to learn - resource MDN.
 
+IF - Postfix i.e x++ then -
+x = 4;  (this will increase +1)
+y = x++; (this will stay same)
 
+x = 5
+y = 4
+
+IF - Prefix i.e ++x then -
+x = 5; (this will increase +1)
+y = ++x; (this will also increase +1)
+
+x = 6
+y = 6
+*/
