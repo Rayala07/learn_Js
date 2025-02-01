@@ -29,5 +29,18 @@ const myCoding = [
 
 
 myCoding.forEach( (item) => {
-    console.log(item.languageName);
+    // console.log(item.languageName);
 })
+
+
+// When you want to get some values in return on basis of condtion such as filtering data 
+const nums = [1,2,3,4,5,6,7,8,9,10]
+
+// const newNums = nums.filter( (num) => (num > 5) ) // Remember , like here when giving parenthesis you do not need to give return statement , 
+// console.log(newNums);
+
+const newNums = nums.filter( (num) => {
+    return num > 4  // using curly braces , you need to give return statement { bcz using curly braces establishes a SCOPE }
+} )
+
+console.log(newNums);
