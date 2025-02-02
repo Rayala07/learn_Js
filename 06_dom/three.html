@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: grey; color: orange;">
+
+    
+</body>
+<script>
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = "main"
+    div.id = Math.floor(Math.random() * 10 + 1)
+    div.setAttribute("title","NEW")
+    div.style.backgroundColor= "red"
+    div.style.padding = "12px"
+    div.innerText = "Hey there !" // This doesnt set it overwrites 
+
+    // So far we have just set elements we have not attached it with the body to display it on the web page , so to do that ->
+    document.body.appendChild(div)
+</script>
+</html> 
