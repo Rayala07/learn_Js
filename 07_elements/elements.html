@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Sandbox</title>
+    <meta charset="UTF-8" />
+    <style>
+        #divCoordinate{
+            width: 400px;
+            height: 400px;
+            text-align: center;
+            background-color: blue;
+        }
+        /* .hover{
+            background-color: blanchedalmond;
+        } */
+    </style>
+  </head>
+  <body>
+    <!-- <div id="app">
+      <button id="buttontype">Click here</button>
+    </div> -->
+
+    <div id="divCoordinate">
+        Hover over here
+    </div>
+
+    <h3> Press key here </h3>
+    <input type="text" id="displayKey" placeholder="Press any key">
+
+    <h3> Prevent number input </h3>
+    <input type="text" id="noNumber" placeholder="Only text >>>">
+
+  </body>
+
+  <script>
+    // document
+    //   .getElementById('buttontype')
+    //   .addEventListener('click', function (e) {
+    //     alert(" Button clicked :) ")
+    //   },false);
+
+
+    // let change = document.querySelector('#buttontype')
+
+    // change.addEventListener('click', function(e){
+    //     change.innerText = "I'm changed :)"
+    // })
+
+
+    // Change color on hover ->
+    // let changeColor = document.getElementById('divColor')
+
+    // changeColor.addEventListener("mouseenter", function(){
+    //     changeColor.style.backgroundColor = "yellow";
+    // },false);
+
+    // changeColor.addEventListener("mouseleave", function(){
+    //     changeColor.style.backgroundColor = "blue";
+    // },false);
+
+    //Check coordinates  (Use case , drawing , games etc..)->
+    // let coordinate = document.getElementById('divCoordinate')
+    // coordinate.addEventListener('mousemove', function(e){
+    //     // Define the coordinates , using event object()
+    //     let x = e.clientX;
+    //     let y = e.clientY;
+
+    //     // Display them
+    //     coordinate.innerText = `X: ${x} , Y: ${y}`
+    // },false)
+    
+    // Keyboard events =>
+
+    let key = document.getElementById('displayKey')
+    let noInput = document.getElementById('')
+    
+    // document.addEventListener('keydown', function(e){
+    //     key.value = e.key + " ";
+    // },false)
+
+    // document.addEventListener('keydown', function(e){
+    //     if(e.key >= '0' && e.key <=100){
+    //         e.preventDefault()
+    //     }
+    // })
+
+    
+    
+
+  </script>
+
+</html>
