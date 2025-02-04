@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <ul id="parent">
+            <li id="child1">one</li>
+            <li id="child2">two</li>
+            <li id="child3">three</li>
+            <li id="child4">four</li>
+        </ul>
+        <button id="addItem">Add new item</button>
+    </div>
+</body>
+
+<script>
+    let selectUl = document.querySelector("#parent")
+    let addItemButton = document.querySelector('#addItem')
+    let itemCount = selectUl.children.length;
+
+    selectUl.addEventListener('click', function(e){
+        if(e.target.tagName === 'LI'){
+            console.log(`Clicked : ${e.target.innerText}`);
+            
+        }
+    })
+
+    addItemButton.addEventListener('click',function(e){
+        let newItem = document.createElement('li')
+        itemCount++;
+        newItem.innerText = `This is the new item ${itemCount}`
+        selectUl.appendChild(newItem);
+    })
+
+</script>
+</html>
