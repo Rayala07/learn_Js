@@ -1,0 +1,42 @@
+<!-- // Forms have 3 main events => focus, blur, submit  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <div id="main">
+        <h3 id="firstNameInput">First Name</h3>
+        <input type="text" id="fName" placeholder="Here">
+        <p id="message"></p>
+        <button type="submit">submit</button>
+    </div>
+</body>
+
+<script>
+    let nameInput = document.getElementById('fName')
+    let messageHere = document.getElementById('message')
+    let fullForm = document.getElementById('main')
+
+    nameInput.addEventListener('focus', function(){
+        messageHere.innerText = 'Typing...'
+        messageHere.style.color = 'blue';
+    },false)
+
+    nameInput.addEventListener('blur', function(){
+        messageHere.innerText = ''
+        messageHere.style.color = 'red';
+    },false)
+
+    fullForm.addEventListener('submit', function(e){
+        if(nameInput.value.trim() === ""){
+            alert("Empty submition not allowed")
+            e.preventDefault();
+        }
+    },false)
+
+</script>
+</html>
