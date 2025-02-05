@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+    <h1 id="heading">Learn Async programming</h1>
+    <button id="stop">
+        Stop
+    </button>
+</body>
+<script>
+    setTimeout(function(){
+        // console.log("2 seconds over");  
+    },2000) // executes after 2 secs.. executed only once
+
+    const call = function(){
+        // console.log("Callled now");
+    }
+
+    // setTimeout(call,3000); //dont write call()-> x , just its name , bcz setTimeout needs handler <>
+
+    const changeText = function(){
+        document.getElementById('heading').innerText = "You are learning Async JS"
+    }
+
+    const textChange = setTimeout(changeText, 2000)
+
+    // Many setTimeout() could be thre , you have to provide the reference of th timeOut you want to stop!
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(textChange)
+        console.log("Stopped"); 
+    },false)
+</script>
+</html>
+
+<!-- In Async Js , the methods such as setTimeOut() , setInterval()... are not part of core jS , they are called from the window API / Browser API , this methods are provided by the 
+ window object{} , study about their other methods !! 
+ -->
+
