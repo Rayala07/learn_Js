@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>Hy there Good morning !</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+    const sayHi = function(str){
+        console.log(str , Date.now());
+    }
+
+    const interval = setInterval(sayHi , 1000, "Hy there Rayala") // Every second performs operations , until stopped  
+
+    clearInterval(interval)
+
+    
+</script>
+</html>
